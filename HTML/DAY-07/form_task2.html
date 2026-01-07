@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1><mark>Student Registration Form</mark></h1>
+    </center>
+    <form action="">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <table>
+          <tr>
+            <td><label for="firstname">First Name :</label></td>
+            <td><input type="text" id="firstname" /></td>
+          </tr>
+          <tr>
+            <td><label for="lname">Last Name :</label></td>
+            <td><input type="text" id="lname" /></td>
+          </tr>
+          <tr>
+            <td><label for="mail">Email :</label></td>
+            <td><input type="email" id="mail" /></td>
+          </tr>
+          <tr>
+            <td><label for="phno">Phone Number :</label></td>
+            <td><input type="number" id="phno" /></td>
+          </tr>
+          <tr>
+            <td><label for="dob">Date of Birth :</label></td>
+            <td><input type="date" id="dob" /></td>
+          </tr>
+          <tr>
+            <td><label for="gender">Gender :</label></td>
+            <td>
+              <input type="radio" name="gender" />Male
+              <input type="radio" name="gender" />Female
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Academic Information</legend>
+        <table>
+          <tr>
+            <td><label for="courses">Courses :</label></td>
+            <td>
+              <select name="course" id="courses">
+                <option value="" selected disabled>
+                  ---select your course---
+                </option>
+                <optgroup label="FULL STACK COURSE">
+                  <option>JAVA FULL STACK</option>
+                  <option>PYTHON FULL STACK</option>
+                </optgroup>
+                <optgroup label="TERSTING SOFTWARE">
+                  <option value="">SFOTWARE TESTRING</option>
+                </optgroup>
+                <option>DATA ANALYTICS + DATA SCIENCE</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="skill">Skills :</label></td>
+            <td>
+              <input
+                type="text"
+                placeholder="Select or type a skill"
+                id="skill"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="address">Address :</label></td>
+            <td><textarea type="text" cols="40" rows="5"></textarea></td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Login Credentials</legend>
+        <table>
+          <tr>
+            <td><label for="username">Username :</label></td>
+            <td><input type="text" id="username" /></td>
+          </tr>
+          <tr>
+            <td><label for="pass">Password :</label></td>
+            <td><input type="password" id="pass" /></td>
+          </tr>
+          <tr>
+            <td><label for="con_pass">Confirm Password :</label></td>
+            <td><input type="password" id="con_pass" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Declaration</legend>
+        <table>
+          <tr>
+            <td>
+              <input type="checkbox" id="agree" v+ value="agree" />I agree to
+              the the Terms & Conditions
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <center><button>Register</button>
+                <button>Reset</button></center>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>

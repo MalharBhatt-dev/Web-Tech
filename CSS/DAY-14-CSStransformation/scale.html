@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f2f4f8;
+        padding: 30px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+      .parent {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+      }
+      .box {
+        width: 120px;
+        height: 120px;
+        background-color: purple;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 18px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      #box1:hover {
+        transform: rotate(45deg) scale(1.5);
+        background-color: #457abd;
+      }
+
+      #box2:hover {
+        transform: scaleX(1.25);
+        background-color: #457abd;
+      }
+
+      #box3:hover {
+        transform: scaleY(2);
+        background-color: #457abd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>transform : rotate() property</h1>
+    <div class="parent">
+      <div class="box" id="box1">Rotate-Z</div>
+      <div class="box" id="box2">Rotate-X</div>
+      <div class="box" id="box3">Rotate-Y</div>
+    </div>
+  </body>
+</html>

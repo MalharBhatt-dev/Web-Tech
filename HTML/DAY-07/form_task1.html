@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend><h1>Job Application Form</h1></legend>
+      <br />
+      <table>
+        <tr>
+          <td><label for="firstname">First Name :</label></td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="lastname">Last Name :</label></td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email :</label></td>
+          <td><input type="email" /></td>
+        </tr>
+        <tr>
+          <td><label for="phno">Phone Number :</label></td>
+          <td><input type="number" /></td>
+        </tr>
+        <tr>
+          <td><label for="dob">Date of Birth :</label></td>
+          <td><input type="date" /></td>
+        </tr>
+        <tr>
+          <td><label for="gender">Gender</label></td>
+          <td>
+            <input type="radio" name="gender" value="Male" />Male
+            <input type="radio" name="gender" value="Female" />Female
+          </td>
+        </tr>
+        <tr>
+          <td><label for="address">Address :</label></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="citys">City :</label></td>
+          <td>
+            <input type="text" list="city" id="citys" />
+            <datalist id="city">
+              <option value="ahmedabad">Ahmedabad</option>
+              <option value="baroda">Baroda</option>
+              <option value="surat">Surat</option>
+              <option value="anand">Anand</option>
+              <option value="gandhinagar">Gandhinagar</option>
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="states">State :</label></td>
+          <td>
+            <input type="text" list="state" id="states" />
+            <datalist id="state">
+              <option value="guujarat">gujarat</option>
+              <option value="rajasthan">rajasthan</option>
+              <option value="mahatrashtra">mahatrashtra</option>
+              <option value="tamil nadu">tamil nadu</option>
+              <option value="bihar">bihar</option>
+              <option value="Jammu-Kashmir">Jammu-Kashmir</option>
+              <option value="Hariyana">Hariyana</option>
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pincode">Pincode :</label></td>
+          <td><input type="number" id="pincode" /></td>
+        </tr>
+        <tr>
+          <td><label for="PAO">Position Applied For :</label></td>
+          <td><input type="text" id="PAO" /></td>
+        </tr>
+        <tr>
+          <td><label for="doc">Upload Document</label></td>
+          <td><input type="file" id="doc" /></td>
+        </tr>
+        <tr>
+          <td><label for="profile">LinkedIn Porfile :</label></td>
+          <td><input type="url" id="profile" /></td>
+        </tr>
+        <tr>
+          <td><label for="date">Available Start Date :</label></td>
+          <td><input type="date" id="date" /></td>
+        </tr>
+        <tr>
+          <td><label for="sal">Expected Salary :</label></td>
+          <td><input type="number" id="sal" /></td>
+        </tr>
+        <tr>
+          <td><label for="relocate">Willing to Relocate :</label></td>
+          <td>
+            <select name="relocate">
+              <option value="yes" selected>YES</option>
+              <option value="no">NO</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><button>Submit Application</button></td>
+        </tr>
+      </table>
+    </fieldset>
+  </body>
+</html>

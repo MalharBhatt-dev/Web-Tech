@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 500px;
+            height: 150px;
+            display: flex;
+            background-color: green;
+            justify-content: flex-start;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            color: white;
+        }
+        #parent1{
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        #parent2{
+            justify-content: center;
+            align-items: center;
+        }
+        #parent3{
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        #parent4{
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #parent5{
+            justify-content: space-around;
+            align-items: center;
+        }
+        #parent6{
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox in CSS</h1>
+    <h2>justify-content : flex-start</h2>
+    <div class="parent" id="parent1">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+    </div>
+    <h2>justify-content : center</h2>
+    <div class="parent" id="parent2">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+    </div>
+    <h2>justify-content : flex-end</h2>
+    <div class="parent" id="parent3">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+    </div>
+    <h2>justify-content : space-evenly</h2>
+    <div class="parent" id="parent4">
+        <div class="box" id="box1">boxq1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+    </div>
+    <h2>justify-content : space-around</h2>
+    <div class="parent" id="parent5">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+    </div>
+    <h2>justify-content : space-between</h2>
+    <div class="parent" id="parent6">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+    </div>
+</body>
+</html>

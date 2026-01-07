@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Task 2</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+      background-color: rgb(210, 210, 210);
+    }
+
+    .parent {
+      width: 70%;
+      height: 200vh;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      padding: 20px;
+      margin: auto;
+      box-shadow: 10px 10px 10px 50px rgba(rgba(125, 123, 123, 0.505));
+    }
+
+    .griditem {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: black;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      color: white;
+      font-size: 25px;
+      font-weight: 800;
+
+      border-radius: 5px;
+    }
+
+    .griditem:hover {
+      box-shadow: 5px 15px 80px rgba(63, 63, 64, 0.5);
+    }
+
+    #heading {
+      grid-column: 1/5;
+      display: flex;
+      height: 80%;
+      justify-content: space-between;
+      align-items: flex-end;
+      background-color: rgb(210, 210, 210);
+      border-bottom: 2px solid grey;
+      color: black;
+    }
+    #heading:hover {
+      box-shadow: none;
+    }
+
+    /* ROW 1 */
+    #griditem1 {
+      grid-column: 1;
+      grid-row: 2/3;
+      background-image: url(https://imgs.search.brave.com/R6IyV2plAUAQNGg4LqP03ZNUFfYLOqEIYxWmMkhVOU0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YXJ0cGhvdG9saW1p/dGVkLmNvbS9pbWFn/ZXMvNjMxODZhMjBi/ZDQwYjgwOWQ1YmFj/NmMwLzcwMHg3MDAv/MTk2NS1wb3JzY2hl/LTkxMS1mYWNlLmpw/Zw);
+    }
+    #griditem2 {
+      grid-column: 2;
+      grid-row: 2/5;
+      background-image: url(https://imgs.search.brave.com/4glo1MYUm7igfZOkej6Y7-Bx_4mLMYXcWwZL5FGj8Zc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzU2NzQ2NTc0L3Iv/aWwvNGM1OGZmLzY2/NTQ1NTM1MjIvaWxf/MzAweDMwMC42NjU0/NTUzNTIyX3BhMGQu/anBn);
+    }
+    #griditem3 {
+      grid-column: 3;
+      grid-row: 2/4;
+      background-image: url(https://imgs.search.brave.com/De25Id_ia3-QtXGIHAxJMdkc1BjK3mvFrAfAIsGciZo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM4/NDY2ODIzMi9waG90/by9wb3JzY2hlLXRh/eWNhbi1vbi1hLXB1/YmxpYy1wYXJraW5n/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1BSS12TDcyNF9G/cVJuWEc3bDg1SGNr/NWdMNW1zQVJtY29E/eXRKUENYazJZPQ);
+    }
+    #griditem4 {
+      grid-column: 4;
+      grid-row: 2/3;
+      background-image: url(https://imgs.search.brave.com/-yRY7FwOGUYlappJuPyXbLNQ50tmp9l8oL-1PTgIgzY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTYz/NzY4NDM0OC9waG90/by8xOTY5LXBvcnNj/aGUtOTExdC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9d1ZC/bjZYdk1DYXB5enZJ/VG4ySXNmM1lxcHdI/bXFkMzNSY2oxTHlq/MERraz0);
+    }
+
+    /* ROW 2 */
+    #griditem5 {
+      grid-column: 1;
+      grid-row: 3/7;
+      background-image: url(https://imgs.search.brave.com/13AnOMVWz9SCrqoNoIo1PwCUgf3bES2yxjnWXjMX7NU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjA5/NDAwMzI4MC9waG90/by9wb3JzY2hlLTkx/MS1ndDMtc3BvcnRz/LWNhci1pbi10aGUt/YWxwcy5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9djEzWWN0/Rm9lbVdtNVBKazd4/NzZueDJ4NVpkUk14/MWE2TzhtcWlZSW92/VT0);
+    }
+    #griditem6 {
+      grid-column: 2;
+      grid-row: 5/8;
+      background-image: url(https://imgs.search.brave.com/dfqEe1r8gjv8PGK8B-3tqtln3KxR6fiD4St-7FszDaU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTIx/NzQ0OTI4L3Bob3Rv/LzE5NTgtcG9yc2No/ZS0zNTYtMTYwMC1y/b2Fkc3Rlci5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SGhW/QlBKQmhrQ2ItYy1j/V2M3YUh6b2lQRXhZ/elpmNnc4VmVRRll5/SVJuYz0);
+    }
+    #griditem7 {
+      grid-column: 3;
+      grid-row: 4/9;
+      background-image: url(https://imgs.search.brave.com/R4_jV87a-oEhmkKD9IYc7kf5wzruLu_exBHQdQD_Zlk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3BvZF9w/dWJsaWMvNzUwLzI2/OTAyNC5qcGc);
+    }
+    #griditem8 {
+      grid-column: 4;
+      grid-row: 3/6;
+      background-image: url(https://imgs.search.brave.com/ss32xD0Tt9BQtnJSxHNrPVB4FcqyPtpW51KpiaChl0g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3BvZF9w/dWJsaWMvNzUwLzI2/ODI0Mi5qcGc);
+    }
+
+    /* ROW 3 */
+    #griditem9 {
+      grid-column: 1;
+      grid-row: 7/11;
+      background-image: url(https://imgs.search.brave.com/vqrYcG5bF-RxsBt8Bw7vlaY9UaNHh51NpjE9Ee-90A4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3BvZF9w/dWJsaWMvNzUwLzI3/OTQyNC5qcGc);
+    }
+    #griditem10 {
+      grid-column: 2;
+      grid-row: 8/10;
+      background-image: url(https://imgs.search.brave.com/CPcapLkJh4nsMXxJ6A1zz_jPEGA0dh9seIdNNLoTTy4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3BvZF9w/dWJsaWMvNzUwLzI2/OTAwNS5qcGc);
+    }
+    #griditem11 {
+      grid-column: 3;
+      grid-row: 9/12;
+      background-image: url(https://imgs.search.brave.com/3UBUpk38TBGx6OQH09P2-WBFmjYxXn_0T2U6aieuxqc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTQz/NTY4NTM4L3Bob3Rv/L3BvcnNjaGUtOTEx/LWd0My1yc3ItMjAx/Ni1yYWNlLWNhci1t/b2RlbC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9bDV2ODFP/MEc2RXp3eE82cWMx/OF9SR09Ya0xiNGpz/aGRMWVhvamRZY2tx/WT0);
+    }
+    #griditem12 {
+      grid-column: 4;
+      grid-row: 6/10;
+      background-image: url(https://imgs.search.brave.com/XW-_G9x9b9gZX3ZY_Nu9BugVrdZ_joE8UzRA7YLGoHw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTYz/NzY3ODk3Ny9waG90/by8xOTY5LXBvcnNj/aGUtOTExdC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9UG13/SVgxblA1ZnNBczA4/enc0b2dTcko4WTJr/MXpIeXM1ck8tQWhx/eXRUWT0);
+    }
+
+    /* ROW 4 */
+    #griditem13 {
+      grid-column: 1;
+      grid-row: 11/12;
+      background-image: url(https://imgs.search.brave.com/8EBA7pLEq3oaPbTIopBqyCG-OS36O9X2hSmzYk-OtKc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3BvZF9w/dWJsaWMvNzUwLzIx/NDU5MS5qcGc);
+    }
+    #griditem14 {
+      grid-column: 2;
+      grid-row: 10/12;
+      background-image: url(https://imgs.search.brave.com/67hwRhrYbnBmS3_o0pm9TccJ8ZufY2lIjWBkpJVUGzU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3BvZF9w/dWJsaWMvNzUwLzI2/NzUwMS5qcGc);
+    }
+    #griditem15 {
+      grid-column: 4;
+      grid-row: 10/12;
+      background-image: url(https://imgs.search.brave.com/xciLmRbawlWUNLg--gw5cmlFFk7ioqlWs52r9UbhA34/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTEz/NjY2OTMwNi9waG90/by9wb3JzY2hlLWd0/My5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9YzBGekFTVXBE/QUxTVjFHQnZXVU9G/Q3V3amJ4THphbUhW/T1VEVjhOUFVLMD0);
+    }
+  </style>
+
+  <body>
+    <div class="parent">
+      <div class="griditem" id="heading">
+        <h1>galleria.</h1>
+        <p>START SLIDESHOW</p>
+      </div>
+      <div class="griditem" id="griditem1">Porsche</div>
+      <div class="griditem" id="griditem2">Porsche 911</div>
+      <div class="griditem" id="griditem3">Porsche Tycan</div>
+      <div class="griditem" id="griditem4">1969 Porsche 911t</div>
+      <div class="griditem" id="griditem5">Porsche 911gt3</div>
+      <div class="griditem" id="griditem6">Porsche 356</div>
+      <div class="griditem" id="griditem7">Porsche classic</div>
+      <div class="griditem" id="griditem8">Porsche TurboS</div>
+      <div class="griditem" id="griditem9">Porsche 911Turbo</div>
+      <div class="griditem" id="griditem10">Porsche Monochrome</div>
+      <div class="griditem" id="griditem11">Porscshe BGT</div>
+      <div class="griditem" id="griditem12">Porsche</div>
+      <div class="griditem" id="griditem13">Porsche Turbo</div>
+      <div class="griditem" id="griditem14">Porsche</div>
+      <div class="griditem" id="griditem15">Porsche gt3</div>
+    </div>
+  </body>
+</html>

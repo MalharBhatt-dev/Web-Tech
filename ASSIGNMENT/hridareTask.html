@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        box-sizing: border-box;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .grand-parent {
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+      }
+      .schild {
+        width: 500px;
+        height: 300px;
+        padding: 20px;
+        border-right: 3px solid wheat;
+        border-bottom: 5px solid wheat;
+        border-radius: 10px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas:
+          "head"
+          "head"
+          "main1"
+          "main2"
+          "main3"
+          "foot";
+      }
+      h1 {
+        grid-area: head;
+      }
+      #h31 {
+        grid-area: main1;
+      }
+      #h32 {
+        grid-area: main2;
+      }
+      #h33 {
+        grid-area: main3;
+      }
+      h5 {
+        grid-area: foot;
+      }
+      #parent1 {
+        display: flex;
+        width: 100vh;
+        height: 100vh;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #parent2 {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        background-color: black;
+        display: grid;
+        gap: 5px;
+        grid-template-areas:
+          "mountains mountains ocean ocean"
+          "waterfalls island hills beach"
+          "waterfalls island forest forest"
+          "waterfalls rain forest forest"
+          "desert volcano iceberg land";
+      }
+      .child {
+        background-color: wheat;
+        padding: 20px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+      #child1 {
+        grid-area: mountains;
+        background: url(https://imgs.search.brave.com/hSqsoRJz8a7fvImGdh8tlP4VW4knLWGFjGwcqHa-jkQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDk2/NzA1MzExL3Bob3Rv/L21vdW50YWlucy1h/bmQtdmFsbGV5LWF0/LXN1bnNldC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9ZUtk/enhUdmhrTGJGZzZx/X3dCRmFCc3kyZWlS/RXBiYjhyam9zMFdI/dDdmTT0);
+      }
+      #child2 {
+        grid-area: ocean;
+        background: url(https://imgs.search.brave.com/uoFkSVdKuE8Kaou78T61EWq_Lc61CTF88_Hadlt1lmk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvMTAw/MTY4Mi9wZXhlbHMt/cGhvdG8tMTAwMTY4/Mi5qcGVnP2F1dG89/Y29tcHJlc3MmY3M9/dGlueXNyZ2ImZHBy/PTEmdz01MDA);
+      }
+      #child3 {
+        grid-area: waterfalls;
+        background: url(https://imgs.search.brave.com/ON6c24Ncgtvf01WW0uMagnsAPgVA1w8qtZ4MXdsKGbg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzQzLzUw/L2YwLzQzNTBmMDk5/ZTBmODkxNjEwYjdi/M2FiMmVjYTdiZWQ0/LmpwZw);
+      }
+      #child4 {
+        grid-area: island;
+        background: url(https://imgs.search.brave.com/qf_KElWiZiuDF0oHh0wGfwk_eAOGHvce-Ceh6G5WobY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjIv/MzgzLzUwMi9zbWFs/bC9wYW5vcmFtaWMt/dmlldy1pc2xhbmRz/LWdlbmVyYXRpdmUt/YWktZnJlZS1waG90/by5qcGVn);
+      }
+      #child5 {
+        grid-area: hills;
+        background: url(https://imgs.search.brave.com/XKvuaLlxuW7kClbcfKL8tEhH9QIcVfR8NFekkZFBjJo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTYv/OTM0Lzk4My9zbWFs/bC9hLXN0dW5uaW5n/LWxhbmRzY2FwZS1h/dC1zdW5zZXQtc2hv/d2Nhc2luZy1yb2xs/aW5nLWdyZWVuLWhp/bGxzLXVuZGVyLWEt/Y29sb3JmdWwtc2t5/LXBob3RvLmpwZw);
+      }
+      #child6 {
+        grid-area: beach;
+        background: url(https://imgs.search.brave.com/I_eBUIl04YeJlSjWwTxRlIfzC4MIbUTFHbdfrCScetg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9scC1j/bXMtcHJvZHVjdGlv/bi5pbWdpeC5uZXQv/MjAyNC0wMS9HZXR0/eUltYWdlcy0xMjkx/MjExMTgxLmpwZz9h/dXRvPWZvcm1hdCxj/b21wcmVzcyZxPTcy/JmZpdD1jcm9w);
+      }
+      #child7 {
+        grid-area: forest;
+        background: url(https://imgs.search.brave.com/vcQmw4CXDhcC1awIRPICHFZYtSiQYLw7jZnWgpXSoXc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNzEv/MDY2LzMyMS9zbWFs/bC9teXN0aWMtZm9y/ZXN0LWZsb29yLXBo/b3RvLmpwZWc);
+      }
+      #child8 {
+        grid-area: rain;
+        background: url(https://imgs.search.brave.com/9GUVS-oGucqQsp56QbBlHQvZnT7is0OdW4f3-gyjzmc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzM4L2Iw/LzRjLzM4YjA0Y2Ni/MGRiZGIzYmI4MjJm/MGU2MDdkNGRhOGRh/LmpwZw);
+      }
+      #child9 {
+        grid-area: desert;
+        background: url(https://imgs.search.brave.com/YNM-nF_mOUtpWzzRzheLjBAmmLJ91sCiZpNuPcJYArU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/a2lkcy13b3JsZC10/cmF2ZWwtZ3VpZGUu/Y29tL2ltYWdlcy94/cnViYWxraGFsaS0y/LmpwZy5wYWdlc3Bl/ZWQuaWMuTzRFUG9Q/OEdIci5qcGc);
+      }
+      #child10 {
+        grid-area: volcano;
+        background: url(https://imgs.search.brave.com/8cvw7jIM4FGcrwlQmbQDxrd4F5pafb32qHPleEA1kEo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTc4/NTEyNDI2L3Bob3Rv/L2FjdGl2ZS12b2xj/YW5vLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1yUHBqUDRU/dUIzc0h6b0RSTmlN/WHE1bjdhcFB3ckZV/TVVob016aFg4Z2V3/PQ);
+      }
+      #child11 {
+        grid-area: iceberg;
+        background: url(https://imgs.search.brave.com/Em0KB4HcI_5L_mdmmzvVioafPWbZ1egePwyq5ERSW9M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXRlLnZpc3Rh/LmNvbS9hcGkvbWVk/aWEvc21hbGwvMTU4/MzQ1MjQ4L3N0b2Nr/LXBob3RvLXVuZGVy/d2F0ZXItdmlldy1v/Zi1pY2ViZXJn);
+      }
+      #child12 {
+        grid-area: land;
+        background: url(https://imgs.search.brave.com/hw1pknzgNBXHORJ7O8gCUjSq7bdO9JTSvJMHp5FhT4g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wb3N0/ZXJqYWNrLmNvbS9j/ZG4vc2hvcC9hcnRp/Y2xlcy9sYW5kc2Nh/cGVfcGhvdG9ncmFw/aHlfdGlwc19mZWF0/dXJlZF9pbWFnZV80/NTV4NDU1X2RhNTcz/ODk5LTVlNGQtNGNh/Yy05ZTc3LTI2OTg4/MmExZGNkZC5qcGc_/dj0xNTYzNDIxODUy/JndpZHRoPTE1MDA);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grand-parent">
+      <div class="parent" id="parent1">
+        <div class="schild">
+          <h1>Nature's Gallery</h1>
+          <h3 id="h31">Everything in this world is beautiful</h3>
+          <h3 id="h32">You just need to look closer</h3>
+          <h3 id="h33">Capture the moment</h3>
+          <h5>Follow for more → @ nature_gallery 🅾 ⓕ ▶️</h5>
+        </div>
+      </div>
+      <div class="parent" id="parent2">
+        <div class="child" id="child1">Mountains</div>
+        <div class="child" id="child2">Ocean</div>
+        <div class="child" id="child3">waterfalls</div>
+        <div class="child" id="child4">Island</div>
+        <div class="child" id="child5">Hills</div>
+        <div class="child" id="child6">Beach</div>
+        <div class="child" id="child7">Forest</div>
+        <div class="child" id="child8">Rain</div>
+        <div class="child" id="child9">Desert</div>
+        <div class="child" id="child10">Volcano</div>
+        <div class="child" id="child11">IceBergs</div>
+        <div class="child" id="child12">Land</div>
+      </div>
+    </div>
+  </body>
+</html>

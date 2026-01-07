@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .parent {
+        width: 600px;
+        height: 600px;
+        border: 2px solid gray;
+        position: relative;
+        text-align: center;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+      }
+      #box1 {
+        background-color: red;
+        position: absolute;
+        z-index: 1;
+      }
+      #box2 {
+        background-color: blue;
+        position: absolute;
+        z-index: 2;
+        right: 0px;
+      }
+      #box3 {
+        background-color: green;
+        position: absolute;
+        z-index: 3;
+        bottom: 0px;
+      }
+      #box4 {
+        background-color: yellow;
+        position: absolute;
+        z-index: 4;
+        bottom: 0px;
+        right: 0px;
+      }
+      #box5 {
+        border-radius: 50%;
+        background-color: purple;
+        position: absolute;
+        z-index: 5;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+      }
+      #box5:hover {
+        z-index: 10;
+      }
+      #box6 {
+        border-radius: 50%;
+        background-color: orange;
+        position: absolute;
+        z-index: 5;
+        top: calc(50% - 50px);
+        left: 180px;
+      }
+      #box7 {
+        border-radius: 50%;
+        background-color: orange;
+        position: absolute;
+        z-index: 5;
+        top: calc(50% - 50px);
+        right: 180px;
+      }
+      #box8 {
+        border-radius: 50%;
+        background-color: orange;
+        position: absolute;
+        z-index: 4;
+        top: calc(50% - 120px);
+        left: calc(50% - 50px);
+      }
+      #box9 {
+        border-radius: 50%;
+        background-color: orange;
+        position: absolute;
+        z-index: 4;
+        bottom: calc(50% - 120px);
+        left: calc(50% - 50px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>absolute position</h1>
+    <div class="parent">
+      <div class="box" id="box1">box-1</div>
+      <div class="box" id="box2">box-2</div>
+      <div class="box" id="box3">box-3</div>
+      <div class="box" id="box4">box-4</div>
+      <div class="box" id="box5">box-5</div>
+      <div class="box" id="box6">box-6</div>
+      <div class="box" id="box7">box-7</div>
+      <div class="box" id="box8">box-8</div>
+      <div class="box" id="box9">box-9</div>
+    </div>
+  </body>
+</html>

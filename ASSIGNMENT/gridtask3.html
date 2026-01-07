@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Model Task</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .parent {
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(18, 17, 17);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 50px;
+    }
+
+    .grid-item {
+      background-color: rgb(18, 17, 17);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      box-shadow: 5px 5px 50px rgba(87, 86, 86, 0.5);
+    }
+
+    #grid-item1 {
+      grid-row: 1/3;
+      background-image: url(https://imgs.search.brave.com/33QdyOP6CzSm8SkkgJHu4p9dv24XdMX28ZMcPlZWkYo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA2LzA0LzcyLzI2/LzM2MF9GXzYwNDcy/MjY5M19sTmhtOFRj/ODd3YUFUazIxMW5X/Q0lMc2hTc1NCbG1t/QS5qcGc);
+    }
+    #grid-item2 {
+      grid-column: 2/4;
+      background-image: url(https://imgs.search.brave.com/G9HrKCPgoTTfZEVpLzn1V0ktknba58w7P_KgVIOexa0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU0/OTYyNTA5L3Bob3Rv/L2xpbmUtb2YtY2Fy/cy1hdC1zdW5zZXQu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVhzX0xYTGxrRlR1/TjZCMm11VW1ac0hf/ZUVqZ0pnQjJOQnNv/clliSWRTSVU9);
+    }
+    #grid-item3 {
+      grid-column: 4;
+      grid-row: 1/3;
+      background-image: url(https://imgs.search.brave.com/LMpycRVJnuIZECMLO9TzipJ2D1ix5_4iPkLKokwGN1s/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzgwLzgzLzA2/LzM2MF9GXzI4MDgz/MDYyNl9TU2JrU3B1/SkdLNVRSVDVhSXBl/MFQzWEVFZkljUU4w/ai5qcGc);
+    }
+    #grid-item4 {
+      grid-column: 2/4;
+      color: white;
+      font-size: 52px;
+    }
+    #grid-item5 {
+      grid-column: 1/3;
+      background-image: url(https://imgs.search.brave.com/_o4ZjS132UrxUxs3Kjd5LF4Oxf7yK0V3aXnCeaSvWto/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTYx/ODE5NjQ3L3Bob3Rv/L25ldy1jYXJzLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0w/c3hqOXhxXzM1RjFp/SVdUY0hWT1hHdTNI/by1pRTNvaklXZGpQ/ek9JUlVJPQ);
+    }
+    #grid-item6 {
+      grid-column: 3/5;
+      color: white;
+      font-size: 32px;
+    }
+  </style>
+
+  <body>
+    <div class="parent">
+      <div class="grid-item" id="grid-item1"></div>
+      <div class="grid-item" id="grid-item2"></div>
+      <div class="grid-item" id="grid-item3"></div>
+      <div class="grid-item" id="grid-item4"><h1>CARS 3</h1></div>
+      <div class="grid-item" id="grid-item5"></div>
+      <div class="grid-item" id="grid-item6">
+        <p><i>"Drive slow to be alive or Drive fast to feel alive"</i></p>
+      </div>
+    </div>
+  </body>
+</html>
