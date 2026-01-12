@@ -1,6 +1,6 @@
 console.log("Functions3.js");
 
-//! Arrow Function:
+//h Arrow Function:
 
 //~ NOTE: Arrow functions don't have their arguments object.
 
@@ -17,7 +17,7 @@ getNumbers(10,20,30); // This will give an error
 
 //! Error: functions3.js:13 Uncaught ReferenceError: arguments is not defined
 
-//! IMPLICIT RETURN:
+//h IMPLICIT RETURN:
 {
 //& Implicit return means of only one statement is present inside your function there is no need to mention curly bracket{} as well as return keyword.
 //? You can omit the {} and return keyword.
@@ -30,7 +30,7 @@ console.log(sum(10,20));
 let demo = () => console.log("Hello Implicit Return");
 demo();
 }
-//! EXPLICIT RETURN:
+//h EXPLICIT RETURN:
 {
     //& If there are multiple statements is present inside the given function then you have to mention manually curly beackets and return keyord.
     //& If you there are mentioning the return keyword manually then you have to must use curly brackets.
@@ -50,7 +50,7 @@ demo();
 //let demo2 = () => console.log("First Statement"); console.log("Second Statement");
 //demo2(); //! This will give an error
 
-//!6 CALLBACK FUNCTION: 
+//h CALLBACK FUNCTION: 
 //& A fucntion which is passed to another function as an argument is called as Callback Function.
 
 // OrderFood:
@@ -79,3 +79,4 @@ function reviewFood(){
 
 document.getElementById("orderserve").addEventListener("click", () =>{orderFood(serveFood);});
 document.getElementById("orderreview").addEventListener("click", () =>{orderFood(reviewFood);});
+
