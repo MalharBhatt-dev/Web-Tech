@@ -19,6 +19,8 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -313,11 +315,23 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
@@ -332,6 +346,10 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -401,6 +419,55 @@
       }
     }
   }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
+  }
+  .hover\:bg-\[rg\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rg;
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(16\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(16);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(16\,63\,184\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(16,63,184);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(16\,84\,\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(16,84,);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\[\]\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb[];
+      }
+    }
+  }
+  .hover\:bg-\[rgd\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgd;
+      }
+    }
+  }
   .hover\:bg-blue-700 {
     &:hover {
       @media (hover: hover) {
@@ -427,6 +494,41 @@
     &:hover {
       @media (hover: hover) {
         color: rgb(16,);
+      }
+    }
+  }
+  .hover\:text-\[rgb\(16\,\,63\,184\)\] {
+    &:hover {
+      @media (hover: hover) {
+        color: rgb(16,,63,184);
+      }
+    }
+  }
+  .hover\:text-\[rgb\(16\,63\)\] {
+    &:hover {
+      @media (hover: hover) {
+        color: rgb(16,63);
+      }
+    }
+  }
+  .hover\:text-\[rgb\(16\,63\,\)\] {
+    &:hover {
+      @media (hover: hover) {
+        color: rgb(16,63,);
+      }
+    }
+  }
+  .hover\:text-\[rgb\(16\,63\,184\)\] {
+    &:hover {
+      @media (hover: hover) {
+        color: rgb(16,63,184);
+      }
+    }
+  }
+  .hover\:text-\[rgb\(16\,184\)\] {
+    &:hover {
+      @media (hover: hover) {
+        color: rgb(16,184);
       }
     }
   }
