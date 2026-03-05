@@ -3,9 +3,14 @@
 
 //! Q. What is the difference between == and ===?
 
+//! Arithmatic Operators : -> + , - , * , / , ** , % .
+
+//!Logical Operators : -> && , || , ! .
+
+//!Comparison Operators : -> > , < , >= , <= , == , === , != .
+
 let num1 = 10;
 let num2 = "10";
-
 //*Here, == will only checks the value not the datatypes.
 console.log(num1 == num2); //True
 
