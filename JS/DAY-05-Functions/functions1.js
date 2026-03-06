@@ -97,6 +97,23 @@ function getNumbers() {
 }
 
 getNumbers(10,20,30);
+//& arguments keyword in function?
+
+function getNumberS(num1,num2,num3,num4,num5){
+    //console.log(num3);
+    console.log(argumets);
+    console.log(arguments[0]);//10
+    console.log(arguments[4]);//50
+}
+getNumberS(10,20,30,40,50);
+console.log(Array.isArray(getNumberS(10,20,30,40,50)));//false
+
+//! 'this' keyword in function ?
+function thiskeyword(){
+    console.log(this);//window Object -> Global Object -> Each and Every Browser.
+}
+
+thiskeyword();
 
 //! 4. IIFE:
 //* The IIFE stands for Immediate Invoking Function Expression.
