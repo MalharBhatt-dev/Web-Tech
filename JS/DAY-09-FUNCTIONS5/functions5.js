@@ -1,7 +1,7 @@
 console.log("Functions Currying...")
 
 
-//! 11. Function Currying:
+//h 11. Function Currying:
 //*Currying is a way of transforming a function that takes multiple inputs into a series of functions, each taking just one input at a time. This makes it easier to work with functions by allowing you to provide some arguments now and others later.
 
 function func1(num1){
@@ -18,3 +18,6 @@ function func1(num1){
 func1(10)(20)(30);
 
 //! Real world example of Function currying..
+//! OR 2. example:::->
+let fun = a => b => c => a+b+c;
+console.log(fun(1)(2)(3));
