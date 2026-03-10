@@ -71,6 +71,7 @@ outer();
 //&  If you are trying to access the outer function variable or data inside the inner function that time it will create the closure by the outer function.
 //? Here , closure means remembering the value of outer function inside the inner function.
 }
+
 //h 10. Generator Function:
 {
     //& The generator function is a special type of function which will pause and resume its execution.
@@ -85,7 +86,6 @@ outer();
         yield "Episode 3";
         return "All Episodes are completed!";
     }
-
     let episode = netflixSeries();
     console.log(episode.next());
     console.log(episode.next());
