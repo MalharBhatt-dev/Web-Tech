@@ -1,5 +1,5 @@
 console.log("Variable")
-//* Variable is a memory location or container to store data.
+//h Variable is a memory location or container to store data.
 // Identifier is the name given to a variable
 // There are 3 Ways to create variable
 
