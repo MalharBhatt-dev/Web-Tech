@@ -9,14 +9,14 @@ console.log("Variable")
 
 //* 2. const: const variable intoduced in ES6 which was released in 2015.
 
-// 1. Declaration: NO
+//& 1. Declaration: NO
 /* const num;
 console.log(num); */
 
-// 2. Initialization: NO
+//& 2. Initialization: NO
 num = 20;
 
-// 3. D + I: YES
+//& 3. D + I: YES
 const num2 = 20;
 console.log(num2);
 
