@@ -20,7 +20,7 @@ num = 20;
 const num2 = 20;
 console.log(num2);
 
-// 4. R-D: NO
+//& 4. R-D: NO
 //const num2 = 30; ERROR: Cannot redeclare block-scoped variable 'num'.
 //console.log(num);
 
