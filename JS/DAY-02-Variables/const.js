@@ -24,6 +24,6 @@ console.log(num2);
 //const num2 = 30; ERROR: Cannot redeclare block-scoped variable 'num'.
 //console.log(num);
 
-// 5. R-I: NO
+//& 5. R-I: NO
 num2 = 100;
 console.log(num2); //ERROR: TypeError: Assignment to constant variable.
