@@ -39,3 +39,23 @@ let laptop = [
     ["price",60000]
 ];
 console.log(Object.fromEntries(laptop));
+
+//! Advanced Looping for extras..
+//h For - In Loop :
+//*It is used for looping the objects.
+for (const k in employee) {
+console.log(k);//keys
+console.log(employee[k]);//values
+console.log(employee.k);//undefined //!Should not use in For - In loop   
+}
+
+//h For - of loop :
+//* It is used in Iterable datatypes like array , string , etc.
+let arr = [1,2,3];
+for (let ele of arr){
+    console.log(ele);//values
+}
+for (let ele in arr){
+    console.log(ele);//index
+    console.log(arr[ele]);//values
+}
