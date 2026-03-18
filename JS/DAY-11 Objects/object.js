@@ -39,4 +39,4 @@ console.log(human);
 //! How to remove the existing properties from the object :
 //? Syntax : delete obj_ref_var.keyName;
 delete human.isChild;
-console.log(human);
+console.log(human); 
