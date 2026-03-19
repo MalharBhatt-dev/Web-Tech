@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Age Task</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <section class="w-full h-screen flex flex-col items-center p-5"> 
+        <h1 class="text-2xl font-semibold md-3">Age Calculator Task</h1>
+        <div>
+            <input type="date" id="birthDate" class="outline-none border border-gray-300 p-2 focus:ring-1 focus:ring-blue-600 transition">
+            <input type="date" id="currentDate" class="outline-none border border-gray-300 p-2 focus:ring-1 focus:ring-blue-600 transition readonly">
+            <button onclick="calculateAge()" class="p-2 bg-blue-600 rounded text-white cursor-pointer">Calculate Age</button>
+        </div>
+        <h2 id="result" class="mt-4 text-xl font-semibold text-red-600"></h2>
+    </section>
+    <script src="ageTask.js"></script>
+</body>
+</html>
